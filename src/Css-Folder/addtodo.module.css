@@ -1,0 +1,43 @@
+.loginform{
+    width: 60%;
+    border: 2px solid rgb(197, 202, 219);
+    margin: 3rem auto;
+    height: 300px;
+    
+}
+
+
+.loginform label{
+  padding-left: 2rem;
+  
+  padding-top: 2rem;
+  font-size: 1.5rem;
+
+}
+
+
+.loginform input{
+    margin-top: 1rem;
+   
+    display: block;
+    height: 15%;
+
+}
+
+
+.loginform button{
+    background-color:  rgb(0, 145, 255);; /* Transparent background */
+    color: #fff; /* White text color */
+    padding: .5rem 2rem; /* Adjust padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 20%;
+    height: 15%;
+    margin-left: 2rem;
+    margin-top: 1rem;
+   
+}

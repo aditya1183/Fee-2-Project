@@ -1,25 +1,37 @@
 import React from 'react'
-
-function Todo({ id , title , completed , togglecompleted , deletetodo}) {
+import { useData } from '../Context/TodoData';
+import styles from "../Css-Folder/todo.module.css"
+import { MdDelete } from "react-icons/md";
+import { FaCheck } from "react-icons/fa";
+import { RiDeleteBin6Fill } from "react-icons/ri";
+import { ImCross } from "react-icons/im";
+function Todo({ id , title , completed }) {
+  const {   todos , Deletetodo,ToggleCompleted , AddTodo } =useData();
     function handleCompleted(){
-        togglecompleted(id);
+      ToggleCompleted(id);
 
     }
     function handledelete(){
-        deletetodo(id);
+      Deletetodo(id);
+    }
+    if(todos.lenght==0){
+      return <h1>No Todos Found</h1>
     }
   return (
-    <div style={{
-        border:"2px solid black",
-        margin:"1rem",
-        textAlign:"center",
-
-    }}>
+    <div className={styles.outerbody}>
+         <div className={styles.contentdiv}>
          <h2>{id}</h2>
-        <p>{title}</p> 
+        <p style={{
+          textDecoration:completed ? "line-through" : "solid"
+        }}>{title}</p> 
         <p>Completed : {completed?"True" : "False"}</p>
-        <button onClick={handleCompleted}>Completed</button>
-        <button onClick={handledelete}>Delete Todo</button>
+
+         </div>
+
+        <div className={styles.buttondiv}>
+        <button onClick={handleCompleted}>{completed ? <FaCheck /> : <ImCross /> }</button>
+        <button onClick={handledelete}><RiDeleteBin6Fill /></button>
+        </div>
     
       
 

@@ -1,0 +1,77 @@
+.navbar {
+   
+    width: 90%;
+    margin: auto;
+    
+    background-color:rgb(187, 214, 234);
+    border: 2px solid transparent;
+    /* height: 5rem; */
+    border-radius: 10px;
+  }
+.navbar ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    /* height: 70px; */
+    border-radius: 30px;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  
+    
+.logoutbutton{
+  color: black;
+}
+}
+button Link{
+  list-style: none;
+  text-decoration: none;
+}
+
+
+.headinglink{
+  text-decoration: none;
+  color: #32565a;
+ 
+}
+
+
+
+
+
+
+.navbar button {
+    background-color:  rgb(168, 198, 221); /* Transparent background */
+    color: #fff; /* White text color */
+    padding: .5rem 2rem; /* Adjust padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+
+.link{
+  list-style: none;
+  text-decoration: none;
+  color: #32565a;
+}
+
+
+
+
+  
+  .nav-link {
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit color from navbar */
+    margin-right: 20px; /* Add spacing between links */
+    font-weight: bold; /* Make links bolder */
+  }
+  
+  .nav-link:hover {
+    color: #e0e0e0; /* Change color on hover */
+  }
+  
