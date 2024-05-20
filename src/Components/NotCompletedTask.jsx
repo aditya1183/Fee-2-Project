@@ -9,11 +9,17 @@ function NotCompletedTask() {
    <>
    {
     isloggedin && todos.map((todo)=>{
-        return <>
+        return <div >
+            
+        
         {
-            !todo.completed && <h1>{todo.title}</h1>
+            !todo.completed && <>
+            <h1>Id : {todo.id}  ,  Title :{todo.title}</h1>
+            
+            
+            </>
         }
-        </>
+        </div>
     })
    }
    </>

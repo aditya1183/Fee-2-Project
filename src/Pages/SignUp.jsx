@@ -1,40 +1,33 @@
-import React, { useState } from 'react';
-import styles from "../Css-Folder/Signup.module.css"
-import {  toast } from 'react-toastify';
+import React, { useState } from "react";
+import styles from "../Css-Folder/Signup.module.css";
+import { toast } from "react-toastify";
 
 function SignUp() {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState(''); // For error handling
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // For error handling
 
   const handleSignup = async (event) => {
     event.preventDefault();
 
     // Basic validation (more can be added)
     if (password !== confirmPassword) {
-      toast.error('Passwords do not match.');
+      toast.error("Passwords do not match.");
       setPassword("");
       setConfirmPassword("");
       return;
-    }
-
-    else if(username.trim().length==0){
-      toast.error("Please Enter UserName")
-    }
-     else if(email.trim().length==0){
+    } else if (username.trim().length == 0) {
+      toast.error("Please Enter UserName");
+    } else if (email.trim().length == 0) {
       toast.error("Please Enter Email .");
+    } else if (
+      password.trim().length() == 0 ||
+      confirmPassword.trim().length == 0
+    ) {
+      toast.error("Please Enter Your Password");
     }
-    else if(password.trim().length()==0 || confirmPassword.trim().length==0){
-      toast.error("Please Enter Your Password")
-    }
-    
-
-
-
-   
-
 
     // try {
     //   // Implement signup logic with API call (replace with your backend logic)
@@ -56,24 +49,22 @@ function SignUp() {
     // }
   };
 
-  function handleclick(){
-  
-    if(password===confirmPassword && username.length>=5 && email.length>=6){
+  function handleclick() {
+    if (
+      password === confirmPassword &&
+      username.length >= 5 &&
+      email.length >= 6
+    ) {
       toast.info("You Have Sucessfull Create Your Account");
-      setUsername("")
-      setConfirmPassword("")
-      setPassword("")
-      setEmail("")
-      
+      setUsername("");
+      setConfirmPassword("");
+      setPassword("");
+      setEmail("");
     }
-  
-
-
-  };
-
+  }
 
   return (
-    <div className="signup-container">
+    <div className={styles.signupcontainer}>
       <h1>Sign Up</h1>
       <form onSubmit={handleSignup} className={styles.signupform}>
         <h2>Enter Your Details</h2>
@@ -83,7 +74,6 @@ function SignUp() {
           id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          
         />
         <label htmlFor="email">Email:</label>
         <input
@@ -91,7 +81,6 @@ function SignUp() {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          
         />
         <label htmlFor="password">Password:</label>
         <input
@@ -99,7 +88,6 @@ function SignUp() {
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-         
         />
         <label htmlFor="confirmPassword">Confirm Password:</label>
         <input
@@ -107,11 +95,16 @@ function SignUp() {
           id="confirmPassword"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
-         
         />
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <button  onClick={handleclick} className={styles.signupbtn} type="submit">Sign Up</button>
-      </form> 
+        <button
+          onClick={handleclick}
+          className={styles.signupbtn}
+          type="submit"
+        >
+          Sign Up
+        </button>
+      </form>
     </div>
   );
 }

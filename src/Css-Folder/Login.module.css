@@ -73,9 +73,11 @@
 
 
 .mainform{
-    width: 60%;
-    margin: 1rem auto;
-    border: 2px solid black;
+  max-width: 700px;
+  min-width: 300px;
+    margin: 2rem auto;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 5px rgb(122, 156, 167);
     padding: 1rem 2rem;
     
 
@@ -93,12 +95,15 @@
     width: 90%;
     margin: auto;
     margin-bottom: .5rem;
+    box-shadow: 0px 0px 5px rgb(138, 177, 190);
+    background-color: rgb(244, 244, 244);
 }
 
 .loginbtn {
     padding: 10px 20px;
     background-color:  rgb(0, 145, 255);
     margin-top: .2rem;
+    width: 20%;
     color: white;
     border: none;
     border-radius: 3px;

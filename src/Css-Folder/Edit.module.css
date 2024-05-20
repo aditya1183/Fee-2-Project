@@ -1,0 +1,31 @@
+.maindiv{
+    border: 2px solid rgb(132, 143, 183);
+    width: 70%;
+    margin:  1rem auto;
+    display: flex;
+    height: 10rem;
+    justify-content: space-around;
+    box-shadow: 0px 0px 10px rgb(138, 177, 190);
+    
+}
+
+
+.contentdiv{
+    margin-top: 1.5rem;
+   
+    width: 40%;
+    overflow:scroll;
+    
+    
+}
+
+
+.buttondiv button{
+   
+  margin-top: 4rem;
+   padding: .5rem 2.5rem;
+   background-color:  rgb(0, 145, 255); /* Transparent background */
+   color: #fff; /* White text color */
+   border: none;
+
+}

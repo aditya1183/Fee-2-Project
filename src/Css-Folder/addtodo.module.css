@@ -1,8 +1,11 @@
 .loginform{
-    width: 60%;
+    max-width: 800px;
+    min-width: 400px;
     border: 2px solid rgb(197, 202, 219);
     margin: 3rem auto;
     height: 300px;
+    box-shadow: 0px 0px 10px rgb(138, 177, 190);
+    background-color: rgb(213, 226, 237);
     
 }
 
@@ -13,30 +16,36 @@
   padding-top: 2rem;
   font-size: 1.5rem;
 
+ 
+
 }
 
 
 .loginform input{
     margin-top: 1rem;
+
    
     display: block;
-    height: 15%;
+    width: 90%;
+    height: 13%;
+    box-shadow: 0px 0px 10px rgb(138, 177, 190);
+    border: none;
+    background-color: rgb(212, 220, 227);
 
 }
 
 
 .loginform button{
-    background-color:  rgb(0, 145, 255);; /* Transparent background */
+    background-color:  rgb(63, 66, 69);; /* Transparent background */
     color: #fff; /* White text color */
-    padding: .5rem 2rem; /* Adjust padding */
+     /* Adjust padding */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
     font-weight: bold; /* Bold text */
     cursor: pointer; /* Pointer cursor on hover */
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 20%;
-    height: 15%;
+    box-shadow: 0 2px 5px rgba(74, 89, 142, 0.1); /* Subtle shadow */
+    padding: .7rem 1.5rem;
     margin-left: 2rem;
     margin-top: 1rem;
    

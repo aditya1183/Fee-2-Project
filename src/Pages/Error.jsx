@@ -1,12 +1,11 @@
-import React from 'react'
-
+import React from "react";
 
 function Error() {
   return (
     <>
-    <h1>Something Went Wrong ! .....</h1>
+      <h1>Something Went Wrong ! .....</h1>
     </>
-  )
+  );
 }
 
-export default Error
+export default Error;

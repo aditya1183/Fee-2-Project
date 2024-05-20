@@ -13,6 +13,21 @@ function RootLayots() {
   }
 
 
+  const handleshowtodo=(e)=>{
+    if(!isloggedin){
+      toast.error("Please Login your Account ... ")
+    }
+  }
+
+
+  const handleedittodo=()=>{
+    if(!isloggedin){
+      toast.error("Please Login your Account ... ")
+    }
+
+  }
+
+
 
   return (
     <div>
@@ -25,10 +40,10 @@ function RootLayots() {
                   
                     </li>
                 <li>
-               <button> <Link  className={styles.link}  to="show">Show</Link></button>
+               <button> <Link  onClick={handleshowtodo} className={styles.link}  to="show">Show</Link></button>
                 </li>
                 <li>
-              <button>  <Link   className={styles.link} to="edit">Edit </Link></button>
+              <button>  <Link    onClick ={handleedittodo} className={styles.link} to="edit">Edit </Link></button>
                 </li>
                 {/* <li><Link to="Signup">Signup</Link></li> */}
 

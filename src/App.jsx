@@ -13,6 +13,7 @@ import TodoData from './Context/TodoData';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { flushSync } from 'react-dom';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 
 
