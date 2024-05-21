@@ -34,7 +34,7 @@ function Addform() {
         type="text"
         id="todo"
         value={todo}
-        placeholder="Enter Your Task .."
+        placeholder="  Enter Your Task .."
         onChange={(e) => setistodo(e.target.value)}
       />
 

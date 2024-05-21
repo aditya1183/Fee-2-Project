@@ -1,14 +1,18 @@
 .navbar {
    
    max-width: 1200px;
-   min-width: 600px;
+   min-width: 400px;
     margin: auto;
     
     background-color:rgb(204, 219, 230);
     border: 2px solid transparent;
+    box-shadow: 0px 0px 5px rgb(138, 177, 190);
     /* height: 5rem; */
     border-radius: 10px;
+    
   }
+ 
+  
 .navbar ul{
     display: flex;
     list-style: none;
@@ -42,16 +46,39 @@ button Link{
 
 
 
+
+
+
+
 .navbar button {
-    background-color:  rgb(168, 198, 221); /* Transparent background */
+    background-color:  rgb(196, 211, 223); /* Transparent background */
     color: #fff; /* White text color */
-    padding: .5rem 2rem; /* Adjust padding */
+    padding: 1rem 2rem; /* Adjust padding */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
     font-weight: bold; /* Bold text */
     cursor: pointer; /* Pointer cursor on hover */
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+   
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar ul Button{
+      display: flex;
+      padding: .5rem;
+      flex-direction: column;
+      
+    }  
+    }
+
+  .navbar button:hover{
+    box-shadow: 0px 0px .1px rgb(138, 177, 190);
+    background-color: #82979a;
+    color: #f1eff1;
+
+  }
+  .navbar button Link :hover{
+    color: #f1eff1;
   }
 
 

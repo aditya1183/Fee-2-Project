@@ -14,6 +14,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { flushSync } from 'react-dom';
 import { Auth0Provider } from '@auth0/auth0-react';
+import SingleTodo from './Components/SingleTodo';
 
 
 
@@ -24,6 +25,7 @@ const router=createBrowserRouter(createRoutesFromElements(<Route path='/' elemen
   <Route path='edit' element={<RequiredAuth><Edit/></RequiredAuth>}/>
   <Route path='login' element={<Login/>}/>
   <Route  path='signup' element={<Signup/>}/>
+  
   <Route path='*' element={<Error/>}/>
 </Route>))
 

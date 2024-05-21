@@ -47,7 +47,7 @@ function Login() {
           name="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          placeholder="Enter UserName"
+          placeholder="  Enter UserName"
         />
         <label htmlFor="password">Password:</label>
         <input
@@ -55,7 +55,7 @@ function Login() {
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter Password"
+          placeholder="  Enter Password"
         />
 
         <button className={styles.loginbtn} onClick={login} type="submit">

@@ -6,9 +6,13 @@ function Show() {
   const { todos, Deletetodo, ToggleCompleted, AddTodo, Settodos } = useData();
   const { isloggedin, setislogedin } = useAuth();
 
+  
+
   return (
     <div>
       {/* <Show todos={todos}  togglecompleted={ToggleCompleted} deletetodo={Deletetodo}/> */}
+
+      
 
       {todos &&
         todos.map((todo) => {
