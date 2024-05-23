@@ -18,13 +18,15 @@ function Editform({ title, dispatch, id, setIsEditingToFalse }) {
       
       
 
-
+      
       Settodos((prev) => {
         return prev.map((todo) => {
           if (id === todo.id) {
             return { ...todo, title:newTitle };
             
-          } else {
+          }
+           
+          else {
             return todo;
           }
         });

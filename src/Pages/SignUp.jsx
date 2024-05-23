@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "../Css-Folder/Signup.module.css";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+import { Navigate , useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [username, setUsername] = useState("");
@@ -8,6 +10,7 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(""); // For error handling
+  const navigate = useNavigate();
 
   const handleSignup = async (event) => {
     event.preventDefault();
@@ -18,16 +21,8 @@ function SignUp() {
       setPassword("");
       setConfirmPassword("");
       return;
-    } else if (username.trim().length == 0) {
-      toast.error("Please Enter UserName");
-    } else if (email.trim().length == 0) {
-      toast.error("Please Enter Email .");
-    } else if (
-      password.trim().length() == 0 ||
-      confirmPassword.trim().length == 0
-    ) {
-      toast.error("Please Enter Your Password");
-    }
+    } 
+    
 
     // try {
     //   // Implement signup logic with API call (replace with your backend logic)
@@ -56,11 +51,16 @@ function SignUp() {
       email.length >= 6
     ) {
       toast.info("You Have Sucessfull Create Your Account");
+      navigate("/", { replace: true });
       setUsername("");
       setConfirmPassword("");
       setPassword("");
       setEmail("");
     }
+
+     
+    
+
   }
 
   return (
@@ -104,7 +104,9 @@ function SignUp() {
         >
           Sign Up
         </button>
+        <p>if You have already account  <Link to={"/login"}>Login .</Link></p>
       </form>
+      
     </div>
   );
 }

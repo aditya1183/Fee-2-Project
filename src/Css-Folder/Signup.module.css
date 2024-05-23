@@ -9,7 +9,7 @@
     
     width: 70%;
     margin: 3rem auto; */
-    width: 50%;
+    width: 40%;
     margin: auto;
    
     padding: 2rem;
@@ -22,15 +22,20 @@
 
 @media screen  and  (max-width: 560px){
   .signupform{
-    width: 70%;
+    width: 80%;
   }
 
   .signupcontainer h2{
-    font-size: small;
+    font-size: large;
   }
 
   .signupfrom lable{
     font-size: 20px;
+  }
+
+  .signupfrom h3{
+    font-size: small;
+    
   }
 
 
